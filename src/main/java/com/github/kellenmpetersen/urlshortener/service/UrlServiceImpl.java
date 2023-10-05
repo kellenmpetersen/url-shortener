@@ -1,11 +1,13 @@
-package com.github.kellenmpetersen.urlshortener;
+package com.github.kellenmpetersen.urlshortener.service;
+
+import com.github.kellenmpetersen.urlshortener.model.Url;
 
 import java.util.HashMap;
 
-public class UrlRepositoryHashMap implements UrlRepository {
+public class UrlServiceImpl implements UrlService {
     private HashMap<String,String> hashmap;
 
-    public UrlRepositoryHashMap(){
+    public UrlServiceImpl(){
         hashmap = new HashMap<>();
     }
 
