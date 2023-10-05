@@ -11,6 +11,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * UrlController
+ * 
+ * Presentation Layer:
+ * Handles clients requests sent over HTTP.
+ * 
+ * Recieves clients requests.
+ * Forwards clients requests to Service layer.
+ * Returns results to clients.
+ */
 @RestController
 public class UrlController {
 
