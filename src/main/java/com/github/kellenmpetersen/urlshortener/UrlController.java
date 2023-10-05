@@ -1,6 +1,7 @@
 package com.github.kellenmpetersen.urlshortener;
 
 import java.util.concurrent.atomic.AtomicLong;
+import java.net.URL;
 import java.util.List;
 
 import com.github.kellenmpetersen.urlshortener.model.Url;
@@ -31,9 +32,15 @@ public class UrlController {
 		this.urlService = urlService;
 	}
 
+	@GetMapping("/urlService")
+	public String getUrl(@RequestParam(value = "longURL", defaultValue = "") String longURL){
+		return urlService.get(longURL);
+	}
+
 	private static final String TEMPLATE = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
 
+	// HTTP GET
 	@GetMapping("/greeting")
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return new Greeting(counter.incrementAndGet(), String.format(TEMPLATE, name));

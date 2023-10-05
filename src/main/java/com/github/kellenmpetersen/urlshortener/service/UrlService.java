@@ -4,8 +4,8 @@ import com.github.kellenmpetersen.urlshortener.model.Url;
 
 public interface UrlService {
 
-    public String put(String hash, String url);
+    public String put(String longUrl);
 
-    public String get(String hash);
+    public String get(String longUrl);
 
 }
