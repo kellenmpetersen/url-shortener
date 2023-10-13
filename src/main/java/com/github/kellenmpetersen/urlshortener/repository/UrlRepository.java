@@ -1,5 +1,7 @@
 package com.github.kellenmpetersen.urlshortener.repository;
 
+import org.springframework.stereotype.Repository;
+
 import com.github.kellenmpetersen.urlshortener.model.Url;
 
 /**
@@ -15,6 +17,7 @@ import com.github.kellenmpetersen.urlshortener.model.Url;
  * used implement CRUD operations instead of SQL
  * (i.e. Hibernate)
  */
+@Repository
 public interface UrlRepository {
 
 }
